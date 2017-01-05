@@ -1,5 +1,5 @@
 # ATTENTION HERE!
-#STILL UNDER COLLECTING,SOME PROPERTIES I HAVEN"T CHECK MYSELF. 
+STILL UNDER COLLECTING,SOME PROPERTIES I HAVEN"T CHECKED MYSELF. 
 
 ---
 
@@ -142,7 +142,7 @@ render(){
 }
 ```
 
-`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up.So `font` property is necessary,or your device will crash.And in fact, ART make `Text` with `Path`, so just try methods what `Shape` has.
+`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up.So `font` property is necessary,or your device will crash.And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
 
 Property | Type | Must | tag
 :-:|:-:|:-:|:-:
@@ -165,7 +165,7 @@ redner(){
 ```
 
 ##### Path
-> Path.move
+###### Path.move
 
 ```js
 getPaths = () => {
@@ -180,7 +180,7 @@ getPaths = () => {
 }
 ```
 
-> Path.moveTo
+###### Path.moveTo
 
 ```js
 getPaths = () => {
@@ -195,7 +195,7 @@ getPaths = () => {
 }
 ```
 
-> Path.line
+###### Path.line
 
 ```js
 getPaths = () => {
@@ -209,7 +209,8 @@ getPaths = () => {
 	)
 }
 ```
-> Path.lineTo
+
+###### Path.lineTo
 
 ```js
 getPaths = () => {
@@ -224,9 +225,9 @@ getPaths = () => {
 }
 ```
 
-Path.reset
+###### Path.reset
 
-> Path.close
+###### Path.close
 Draws a line to the first point in the current sub-path and begins a new sub-path.
 
 ```js
@@ -234,10 +235,9 @@ Path.close();
 ## // It returns the current Path instance.
 ```
 
-Path.toJson
+###### Path.toJson
 
-> Path.arc
-
+###### Path.arc
 Draw an arc with specific arguments.
 
 ```
@@ -248,8 +248,8 @@ arc(xPosition, xPosition, xRadius, yRadius[,outer,counterClockWise,rotation])
 path.arc(10,10,30,40,true,false,1)
 ```
 
-Path.arcTo
-Just line arc,instead of relative position,`arcTo` accept a dot to be the arc end.
+###### Path.arcTo
+Just like arc,instead of passing relative position,`arcTo` accept an absolute point coorid to be the arc end.
 ```
 arcTo(xPosition, xPosition, xRadius, yRadius[,outer,counterClockWise,rotation])
 ```
@@ -258,32 +258,39 @@ arcTo(xPosition, xPosition, xRadius, yRadius[,outer,counterClockWise,rotation])
 path.arcTo(60,90,30,40,true,false,1)
 ```
 
-> Path.counterArc
+###### Path.counterArc
 
 Same as arc,opposite clockwise.
-> Path.counterArcTo
+
+###### Path.counterArcTo
 
 Same as arcTo,opposite clockwise.
 
-Path.curve
+###### Path.curve
 draw a bezier curve to relative position.
 
 ```
 curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,deltaX,deltaY)
 ```
+
 ```js
 path.curve(10,20,30,40,12,32);
 ```
-Path.curveTo
+###### Path.curveTo
 draw a bezier curve to absolute position.
 
 ```
 curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,endPoint.x,endPoint.y)
 ```
+
 ```js
 path.curve(10,20,30,40,12,32);
 ```
 
 ##### Patten
+
+##### Transform
+
+##### ClippingRectangle
 
 ##### Morph
