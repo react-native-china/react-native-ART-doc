@@ -224,19 +224,6 @@ getPaths = () => {
 	)
 }
 ```
-
-###### Path.reset
-
-###### Path.close
-Draws a line to the first point in the current sub-path and begins a new sub-path.
-
-```js
-Path.close();
-## // It returns the current Path instance.
-```
-
-###### Path.toJson
-
 ###### Path.arc
 Draw an arc with specific arguments.
 
@@ -286,6 +273,21 @@ curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,endPoint.x
 ```js
 path.curve(10,20,30,40,12,32);
 ```
+
+
+
+###### Path.reset
+
+###### Path.close
+Draws a line to the first point in the current sub-path and begins a new sub-path.
+
+```js
+Path.close();
+// It returns the current Path instance.
+```
+
+###### Path.toJson
+
 
 ##### Patten
 
