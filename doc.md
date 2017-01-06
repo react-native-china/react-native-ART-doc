@@ -275,8 +275,13 @@ path.curve(10,20,30,40,12,32);
 ```
 
 
-
 ###### Path.reset
+reset the current path.Just like 'beginPath' in canvasRenderingContext2d.
+```js
+// path.points = [...]
+path.reset();
+// path.points = [];
+```
 
 ###### Path.close
 Draws a line to the first point in the current sub-path and begins a new sub-path.
@@ -287,12 +292,32 @@ Path.close();
 ```
 
 ###### Path.toJson
+retrun the current path points,which can be used on Shape `d` attribute.
 
+```js
+var d = new Path(path).toJSON();
+...
+return (
+	<Shape d={d}></Shape>
+)
+```
 
-##### Patten
+##### LinearGradient
+##### RadialGradient
+##### Pattern
 
 ##### Transform
 
+##### move
+##### moveTo
+##### scale
+##### scaleTo
+##### rotate
+##### rotateTo
+##### resizeTo
+##### inversePoint
+
 ##### ClippingRectangle
 
-##### Morph
+#### Morph
+this can create transition between two pathes.
