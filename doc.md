@@ -308,14 +308,14 @@ return (
 
 ##### Transform
 
-##### move
-##### moveTo
-##### scale
-##### scaleTo
-##### rotate
-##### rotateTo
-##### resizeTo
-##### inversePoint
+###### move
+###### moveTo
+###### scale
+###### scaleTo
+###### rotate
+###### rotateTo
+###### resizeTo
+###### inversePoint
 
 ##### ClippingRectangle
 
