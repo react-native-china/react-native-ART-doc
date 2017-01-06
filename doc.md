@@ -1,6 +1,7 @@
 # ATTENTION HERE!
 STILL UNDER COLLECTING,SOME PROPERTIES I HAVEN"T CHECKED MYSELF. 
 
+react JSX syntax doesn't allow comments inline,so remember to delete comments on demo code to avoiding errors.
 ---
 
 #### Elements
@@ -85,8 +86,8 @@ fill|String|false|fill style of Shape.Any color object module will be support
 stroke | String |false|stroke color of paths it contains
 strokeWidth | String |false|stroke width of paths it contains
 strokeDash | Object | false | demo followed.
-strokeCap | String | false | cap style of path end. oneOf([0,1,2])
-strokeJoin | String | false | path join point style. oneOf([0,1,2])
+strokeCap | String | false | cap style of path end. oneOf([0,1,2]),0->butt 1-> round(default) 2->square
+strokeJoin | String | false | path join point style. oneOf([0,1,2]),0 -> miter 1-> round(default) 2-> bevel
 
 ```js
 render(){
@@ -105,7 +106,7 @@ render(){
 					]
 				}}
 				strokeCap:0 // 0:butt 1:round(default) 2:square
-				strokeJoin:0 // 0:miter 1:round(default) 2:square
+				strokeJoin:0 // 0:miter 1:round(default) 2:bevel
 			/>
 		</Surface>
 	)
@@ -128,8 +129,8 @@ render(){
 				 * font = {{
 				 * 		fontFamily:'Helvetica,Neue Helvetica,Arial',
 				 * 		fontSize:23
-				 * 	 	fontWeight:"bold" // or normal
-				 * 	   fontStyle:"italic" // or normal
+				 * 	 	fontWeight:"bold" // or "normal"
+				 * 	   	fontStyle:"italic" // or "normal"
 				 * }
 				**/
 				
@@ -142,7 +143,7 @@ render(){
 }
 ```
 
-`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up.So `font` property is necessary,or your device will crash.And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
+`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up.So `font` property is necessary,or your app will crash.And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
 
 Property | Type | Must | tag
 :-:|:-:|:-:|:-:
@@ -157,7 +158,7 @@ redner(){
 	return (
 		<Surface>
 			<Shape
-				d={ this.getPaths() }
+				d={ this.getPaths() } // You can get what this.getPaths method do in following path.move demo
 			/>
 		</Surface>
 	)
@@ -254,7 +255,7 @@ Same as arc,opposite clockwise.
 Same as arcTo,opposite clockwise.
 
 ###### Path.curve
-draw a bezier curve to relative position.
+draw a cubic bezier curve to relative position.
 
 ```
 curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,deltaX,deltaY)
@@ -262,6 +263,9 @@ curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,deltaX,del
 
 ```js
 path.curve(10,20,30,40,12,32);
+
+// If now we are at (10,10),it draw a cubic bezier curve from (10,10) to (22,42)
+// and use (10,20) as first control point and (30,40) the second one
 ```
 ###### Path.curveTo
 draw a bezier curve to absolute position.
@@ -272,6 +276,9 @@ curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,endPoint.x
 
 ```js
 path.curve(10,20,30,40,12,32);
+
+// if now we are at (10,10),it draw a cubic bezier curve from (10,10) to (12,32)
+// and use (10,20) as first control point and (30,40) the second one
 ```
 
 
