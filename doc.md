@@ -328,3 +328,12 @@ return (
 
 #### Morph
 this can create transition between two pathes.
+
+
+### Events
+#### onArc
+#### onBezierCurve
+#### onClose
+#### onLine
+#### onMove
+#### onReset
