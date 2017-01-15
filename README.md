@@ -1,2 +1,5 @@
-# react-native-ART-doc
-Unofficial documentation for react-native ART module.
+This is an unofficial documentation for react-native ART module.
+
+* [DOC HERE](./doc.md)
+  
+Animation part is really important,isn't it.
