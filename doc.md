@@ -328,6 +328,25 @@ return (
 
 #### Morph
 this can create transition between two pathes.
+> To use morph method,you have to import morph first
+
+```js
+import Morph from 'art/morph/path';
+```
+
+##### Tween
+```js
+Morph.Tween(from,to)
+```
+
+```js
+Morph.Tween(
+	"M 256,213 C 245,181 206,187 234,262Z",
+	"M 212,220 C 197,171 156,153 123,221Z"
+);
+```
+##### Path
+extends from Path.More details [here](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
 
 
 ### Events
