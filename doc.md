@@ -349,12 +349,3 @@ Morph.Tween(
 ```
 ##### Path
 extends from Path.More details [here](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
-
-
-### Events
-#### onArc
-#### onBezierCurve
-#### onClose
-#### onLine
-#### onMove
-#### onReset
