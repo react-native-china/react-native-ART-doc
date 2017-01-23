@@ -149,6 +149,8 @@ Property | Type | Must | tag
 :-:|:-:|:-:|:-:
 font | String or Object | true | font name and font size for text content
 fill | String | false | fill color
+x | Number | false | x position 
+y | Number | false | y position
 
 
 #### APIs
