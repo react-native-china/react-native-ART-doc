@@ -318,7 +318,24 @@ return (
 ##### Transform
 
 ###### move
+move target shape.
+```
+new Transform().move(deltaX,deltaY)
+```
+```js
+new Transform().move(20,20)
+```
+
 ###### moveTo
+move the shaope,take absolute coordinate.
+
+```
+new Transform().moveTo(x,y)
+```
+```js
+new Transform().moveTo(120,120)
+```
+
 ###### scale
 ###### scaleTo
 ###### rotate
