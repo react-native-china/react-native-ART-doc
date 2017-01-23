@@ -124,13 +124,13 @@ render(){
 			<Text
 			
 				font={`13px "Helvetica Neue", "Helvetica", Arial`}
-				/*
-				 * Another way to define font property
+				
+				/* Another way to define font property
 				 * font = {{
-				 * 		fontFamily:'Helvetica,Neue Helvetica,Arial',
-				 * 		fontSize:23
-				 * 	 	fontWeight:"bold" // or "normal"
-				 * 	   	fontStyle:"italic" // or "normal"
+				 * 	fontFamily:'Helvetica,Neue Helvetica,Arial',
+				 * 	fontSize:23
+				 * 	fontWeight:"bold" // or "normal"
+				 * 	fontStyle:"italic" // or "normal"
 				 * }
 				**/
 				
@@ -312,7 +312,48 @@ return (
 ```
 
 ##### LinearGradient
+```jsx
+
+/* Crate linear gradient
+ * @param stops Object linear gradient stops
+ * @demo {'0.1':'green','1':'blue'}
+ * @param x1 Number x-axis coordinate of start point
+ * @param y1 Number y-axis coordinate of start point
+ * @param x2 Number x-axis coordinate of end point
+ * @param y2 Number y-axis coordinate of end point
+ */
+
+var linearGradient = new LinearGradient({
+	'.1': 'blue', // blue in 1% position
+	'1': 'rgba(255,255,255,0)' // opacity white in 100% position
+  },
+  "0","0","0","400"
+)
+
+<Shape fill={linearGradient}>
+```
 ##### RadialGradient
+```jsx
+/* Create radial gradient
+ * @param stops Object linear gradient stops
+ * @demo {'0.1':'green','1':'blue'}
+ * @param fx Number x-axis coordinate of the focal point
+ * @param fy Number y-axis coordinate of the focal point
+ * @param rx Number x-axis coordinate direction radius length
+ * @param ry Number y-axis coordinate direction radius length
+ * @param cx Number x-axis coordinate of the origin point
+ * @param cy Number y-axis coordinate of the origin point
+ */
+ 
+ var radialGradient = new LinearGradient({
+	'.1': 'blue', // blue in 1% position
+	'1': 'rgba(255,255,255,0)' // opacity white in 100% position
+  },
+  "200","200","0","0","0","400"
+)
+
+<Shape fill={radialGradient}>
+```
 ##### Pattern
 
 ##### Transform
