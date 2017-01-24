@@ -128,10 +128,10 @@ render(){
 				/* Another way to define font property
 				 * font = {{
 				 * 	fontFamily:'Helvetica,Neue Helvetica,Arial',
-				 * 	fontSize:23
-				 * 	fontWeight:"bold" // or "normal"
+				 * 	fontSize:23,
+				 * 	fontWeight:"bold", // or "normal"
 				 * 	fontStyle:"italic" // or "normal"
-				 * }
+				 * }}
 				**/
 				
 				fill = "#000000"
