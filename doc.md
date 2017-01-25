@@ -425,6 +425,10 @@ new Transform().rotateTo(72);
 new Transform().rotateTo(72,100,200)
 ```
 ###### resizeTo
+
+###### transform
+###### transformTo
+
 ###### inversePoint
 
 ##### ClippingRectangle
