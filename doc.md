@@ -403,22 +403,26 @@ new Transform().scaleTo(1);
 ```
 
 ###### rotate
-rotate the shape,each time you call this method the angle will superposition.
+rotate the shape,each time you call this method the angle will superposition.pass transform origin x and y axis coordinate as the second and third param,relative to left top corner of outer Surface.
 ```
-new Transform().rotate(deg)
+new Transform().rotate(deg[,transformOriginX,transformOriginY])
 ```
 ```js
 new Transform().rotate(180);
 // attention,the angel is in angel system inestead of radian system.
+// or you can specify transform origin with extra params
+new Transform().rotate(180,100,200)
 ```
 ###### rotateTo
-rotate the shape to a absolute angle.
+rotate the shape to a absolute angle.pass transform origin x and y axis coordinate as the second and third param,relative to left top corner of outer Surface.
 ```
-new Transform.rotateTo(deg)
+new Transform.rotateTo(deg[,transformOriginX,transformOriginY])
 ```
 ```js
 new Transform().rotateTo(72);
 // attention,the angel is in angel system inestead of radian system.
+// or you can specify transform origin with extra params
+new Transform().rotateTo(72,100,200)
 ```
 ###### resizeTo
 ###### inversePoint
