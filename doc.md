@@ -86,8 +86,8 @@ fill|String|false|fill style of Shape.Any color object module will be support
 stroke | String |false|stroke color of paths it contains
 strokeWidth | String |false|stroke width of paths it contains
 strokeDash | Object | false | demo followed.
-strokeCap | String | false | cap style of path end. oneOf([0,1,2]),0->butt 1-> round(default) 2->square
-strokeJoin | String | false | path join point style. oneOf([0,1,2]),0 -> miter 1-> round(default) 2-> bevel
+strokeCap | String | false | cap style of path end. oneOf(["butt","round"(default),"square"])
+strokeJoin | String | false | path join point style. oneOf(["miter","round"(default),"bevel"])
 
 ```js
 render(){
@@ -105,8 +105,8 @@ render(){
 						10,20,20
 					]
 				}}
-				strokeCap:0 // 0:butt 1:round(default) 2:square
-				strokeJoin:0 // 0:miter 1:round(default) 2:bevel
+				strokeCap:"butt" // or round(default)/square
+				strokeJoin:"bevel" // or miter/round(default)
 			/>
 		</Surface>
 	)
@@ -359,28 +359,67 @@ var linearGradient = new LinearGradient({
 ##### Transform
 
 ###### move
-move target shape.
+move target shape,each time you call this method the translate position will superposition.
 ```
-new Transform().move(deltaX,deltaY)
+new Transform().move(deltaX[,deltaY])
 ```
 ```js
 new Transform().move(20,20)
+// or you can only move x
+new Transform().move(20)
 ```
 
 ###### moveTo
-move the shaope,take absolute coordinate.
+move the shape to absolute coordinate position.
 
 ```
-new Transform().moveTo(x,y)
+new Transform().moveTo(x[,y])
 ```
 ```js
 new Transform().moveTo(120,120)
+// or you can only move to x
+new Transform().moveTo(120)
 ```
 
 ###### scale
+scale the shape,each time you call this method the scale value will superposition.
+```
+new Transform().scale(scale[X,scaleY]);
+```
+```js
+new Transform().scale(2,3);
+// or pass only one param to scale both x and y axis value
+new Transform().scale(3)
+```
 ###### scaleTo
+scale the shape to a fixed multiple to origin graphic.
+```
+new Transform().scaleTo(scale[X,scaleY]);
+```
+```js
+new Transform().scaleTo(1,1);
+// or you can use only one param to set both x and y axis value
+new Transform().scaleTo(1);
+```
+
 ###### rotate
+rotate the shape,each time you call this method the angle will superposition.
+```
+new Transform().rotate(deg)
+```
+```js
+new Transform().rotate(180);
+// attention,the angel is in angel system inestead of radian system.
+```
 ###### rotateTo
+rotate the shape to a absolute angle.
+```
+new Transform.rotateTo(deg)
+```
+```js
+new Transform().rotateTo(72);
+// attention,the angel is in angel system inestead of radian system.
+```
 ###### resizeTo
 ###### inversePoint
 
