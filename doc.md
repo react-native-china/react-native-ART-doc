@@ -2,7 +2,7 @@
 STILL UNDER COLLECTING,SOME PROPERTIES I HAVEN"T CHECKED MYSELF. 
 
 react JSX syntax doesn't allow comments inline,so remember to delete comments on demo code to avoiding errors.
----a
+---
 
 #### Elements
 
@@ -454,3 +454,5 @@ Morph.Tween(
 ```
 ##### Path
 extends from Path.More details [here](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
+
+Alternate Events
