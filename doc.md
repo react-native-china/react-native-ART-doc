@@ -427,7 +427,23 @@ new Transform().rotateTo(72,100,200)
 ###### resizeTo
 
 ###### transform
+use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html).each time you call this method the transform value will superposition.
+```
+new Transform.transform(scaleX,skewX,skewY,scaleY,translateX,translateY);
+// change target's position and shape with six arguments。
+```
+```js
+new Transform.transform(2,0,1,1,0,0)
+```
 ###### transformTo
+use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html).each time you call this method the transform value will be reset to the arguments.
+```
+new Transform.transformTo(scaleX,skewX,skewY,scaleY,translateX,translateY);
+// change target's position and shape with six arguments。
+```
+```js
+new Transform.transformTo(1,0,0,1,0,0)
+```
 
 ###### inversePoint
 
@@ -453,6 +469,6 @@ Morph.Tween(
 );
 ```
 ##### Path
-extends from Path.More details [here](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
+extends from Path.[`Reference`](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
 
 Alternate Events
