@@ -135,6 +135,7 @@ render(){
 				**/
 				
 				fill = "#000000"
+				alignment = "center"
 			>
 				Hello World
 			</Text>
@@ -151,6 +152,7 @@ font | String or Object | true | font name and font size for text content
 fill | String | false | fill color
 x | Number | false | x position 
 y | Number | false | y position
+alignment | String | false | oneOf(["right","left","center"])
 
 
 #### APIs
