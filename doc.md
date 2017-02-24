@@ -1,7 +1,7 @@
 # ATTENTION HERE!
-STILL UNDER COLLECTING,SOME PROPERTIES I HAVEN"T CHECKED MYSELF. 
+STILL UNDER COLLECTING, SOME PROPERTIES I HAVEN'T CHECKED MYSELF. 
 
-react JSX syntax doesn't allow comments inline,so remember to delete comments on demo code to avoiding errors.
+react JSX syntax doesn't allow comments inline, so remember to delete comments in demo code to avoid errors.
 ---
 
 #### Elements
@@ -144,7 +144,7 @@ render(){
 }
 ```
 
-`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up.So `font` property is necessary,or your app will crash.And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
+`ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up. So `font` property is necessary, or your app will crash. And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
 
 Property | Type | Must | tag
 :-:|:-:|:-:|:-:
@@ -241,7 +241,7 @@ path.arc(10,10,30,40,true,false,1)
 ```
 
 ###### Path.arcTo
-Just like arc,instead of passing relative position,`arcTo` accept an absolute point coorid to be the arc end.
+Just like arc, instead of passing relative position, `arcTo` accept an absolute point coorid to be the arc end.
 ```
 arcTo(xPosition, xPosition, xRadius, yRadius[,outer,counterClockWise,rotation])
 ```
@@ -252,14 +252,14 @@ path.arcTo(60,90,30,40,true,false,1)
 
 ###### Path.counterArc
 
-Same as arc,opposite clockwise.
+Same as arc, opposite clockwise.
 
 ###### Path.counterArcTo
 
-Same as arcTo,opposite clockwise.
+Same as arcTo, opposite clockwise.
 
 ###### Path.curve
-draw a cubic bezier curve to relative position.
+Draw a cubic bezier curve to relative position.
 
 ```
 curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,deltaX,deltaY)
@@ -272,7 +272,7 @@ path.curve(10,20,30,40,12,32);
 // and use (10,20) as first control point and (30,40) the second one
 ```
 ###### Path.curveTo
-draw a bezier curve to absolute position.
+Draw a bezier curve to absolute position.
 
 ```
 curve(ControlPoint1.x,ControlPoint1.y,ControlPoint2.x,ControlPoint2.y,endPoint.x,endPoint.y)
@@ -287,7 +287,7 @@ path.curve(10,20,30,40,12,32);
 
 
 ###### Path.reset
-reset the current path.Just like 'beginPath' in canvasRenderingContext2d.
+Reset the current path. Just like `beginPath` in canvasRenderingContext2d.
 ```js
 // path.points = [...]
 path.reset();
@@ -303,7 +303,7 @@ Path.close();
 ```
 
 ###### Path.toJson
-retrun the current path points,which can be used on Shape `d` attribute.
+Return the current path points, which can be used on Shape `d` attribute.
 
 ```js
 var d = new Path(path).toJSON();
@@ -361,7 +361,7 @@ var linearGradient = new LinearGradient({
 ##### Transform
 
 ###### move
-move target shape,each time you call this method the translate position will superposition.
+Move target shape, each time you call this method the translate position will superposition.
 ```
 new Transform().move(deltaX[,deltaY])
 ```
@@ -372,7 +372,7 @@ new Transform().move(20)
 ```
 
 ###### moveTo
-move the shape to absolute coordinate position.
+Move the shape to absolute coordinate position.
 
 ```
 new Transform().moveTo(x[,y])
@@ -384,7 +384,7 @@ new Transform().moveTo(120)
 ```
 
 ###### scale
-scale the shape,each time you call this method the scale value will superposition.
+Scale the shape, each time you call this method the scale value will superposition.
 ```
 new Transform().scale(scale[X,scaleY]);
 ```
@@ -394,7 +394,7 @@ new Transform().scale(2,3);
 new Transform().scale(3)
 ```
 ###### scaleTo
-scale the shape to a fixed multiple to origin graphic.
+Scale the shape to a fixed multiple to origin graphic.
 ```
 new Transform().scaleTo(scale[X,scaleY]);
 ```
@@ -405,7 +405,7 @@ new Transform().scaleTo(1);
 ```
 
 ###### rotate
-rotate the shape,each time you call this method the angle will superposition.pass transform origin x and y axis coordinate as the second and third param,relative to left top corner of outer Surface.
+Rotate the shape, each time you call this method the angle will superposition. Pass transformed origin x and y axis coordinate as the second and third param, relative to left top corner of outer Surface.
 ```
 new Transform().rotate(deg[,transformOriginX,transformOriginY])
 ```
@@ -416,7 +416,7 @@ new Transform().rotate(180);
 new Transform().rotate(180,100,200)
 ```
 ###### rotateTo
-rotate the shape to a absolute angle.pass transform origin x and y axis coordinate as the second and third param,relative to left top corner of outer Surface.
+Rotate the shape to an absolute angle. Pass the transformed origin x and y axis coordinate as the second and third param, relative to left top corner of outer Surface.
 ```
 new Transform.rotateTo(deg[,transformOriginX,transformOriginY])
 ```
@@ -429,7 +429,7 @@ new Transform().rotateTo(72,100,200)
 ###### resizeTo
 
 ###### transform
-use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html).each time you call this method the transform value will superposition.
+Use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html). Each time you call this method the transformed value will superposition.
 ```
 new Transform.transform(scaleX,skewX,skewY,scaleY,translateX,translateY);
 // change target's position and shape with six arguments。
@@ -438,7 +438,7 @@ new Transform.transform(scaleX,skewX,skewY,scaleY,translateX,translateY);
 new Transform.transform(2,0,1,1,0,0)
 ```
 ###### transformTo
-use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html).each time you call this method the transform value will be reset to the arguments.
+Use this to make transform with a matrix-like method.[`Reference`](http://sebmarkbage.github.io/art/docs/ART/ART.Transform.html). Each time you call this method the transformed value will be reset to the arguments.
 ```
 new Transform.transformTo(scaleX,skewX,skewY,scaleY,translateX,translateY);
 // change target's position and shape with six arguments。
@@ -452,8 +452,8 @@ new Transform.transformTo(1,0,0,1,0,0)
 ##### ClippingRectangle
 
 #### Morph
-this can create transition between two pathes.
-> To use morph method,you have to import morph first
+This can create transition between two paths.
+> To use morph method, you have to import morph first
 
 ```js
 import Morph from 'art/morph/path';
@@ -471,6 +471,6 @@ Morph.Tween(
 );
 ```
 ##### Path
-extends from Path.[`Reference`](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
+Extends from Path.[`Reference`](https://github.com/sebmarkbage/art/blob/master/morph/path.js#L6-L29);
 
 Alternate Events
