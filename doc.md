@@ -28,7 +28,7 @@ Container for all other ART components.
 render(){
 	return (
 		<Surface>
-			{ all other componnets }
+			{ all other components }
 		</Surface>
 	)
 }
