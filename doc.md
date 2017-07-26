@@ -8,16 +8,16 @@ react JSX syntax doesn't allow comments inline, so remember to delete comments i
 
 ```js
 const {
-	Surface,
-	Shape,
-	Group,
-	Text,
-	Path,
-	ClippingRectangle,
-	LinearGradient,
-	RadialGradient,
-	Pattern,
-	Transform
+  Surface,
+  Shape,
+  Group,
+  Text,
+  Path,
+  ClippingRectangle,
+  LinearGradient,
+  RadialGradient,
+  Pattern,
+  Transform
 } = React.ART
 ```
 
@@ -26,11 +26,11 @@ Container for all other ART components.
 
 ```js
 render(){
-	return (
-		<Surface>
-			{ all other components }
-		</Surface>
-	)
+  return (
+    <Surface>
+      { all other components }
+    </Surface>
+  )
 }
 ```
 Property | Type | Must | tag
@@ -45,21 +45,20 @@ To combine shapes or other groups into hierarchies that can be transformed as a 
 
 ```js
 render(){
-	return (
-		<Surface>
-			{ this.getContainer() }
-			<Shape/>
-		</Surface>
-	)
+  return (
+    <Surface>
+      { this.getContainer() }
+      <Shape/>
+    </Surface>
+  )
 }
 
 getContainer = () => {
-	return (
-		<Group>
-			<Shape>
-			<Shape>
-		</Group>
-	)
+  return (
+    <Group>
+      <Shape/>
+    </Group>
+  )
 }
 ```
 
@@ -69,11 +68,11 @@ Shape implements Transform as a mixin which means it has all transform methods a
 
 ```js
 render(){
-	return (
-		<Surface>
-			<Shape/>
-		</Surface>
-	)
+  return (
+    <Surface>
+      <Shape/>
+    </Surface>
+  )
 }
 ```
 
@@ -91,25 +90,25 @@ strokeJoin | String | false | path join point style. oneOf(["miter", "round"(def
 
 ```js
 render(){
-	return (
-		<Surface>
-			<Shape
-				d = "..."
-				fill = '#000000'
-				stroke = '#FFFFFF'
-				strokeWidth = 12
-				// strokeDash Demo
-				strokeDash = {{
-					count:12, // StrokeDash array length,
-					strokeDash:[
-						10, 20, 20
-					]
-				}}
-				strokeCap:"butt" // or round(default)/square
-				strokeJoin:"bevel" // or miter/round(default)
-			/>
-		</Surface>
-	)
+  return (
+    <Surface>
+      <Shape
+        d = "..."
+        fill = '#000000'
+        stroke = '#FFFFFF'
+        strokeWidth = 12
+        // strokeDash Demo
+        strokeDash = {{
+          count:12, // StrokeDash array length,
+          strokeDash:[
+            10, 20, 20
+          ]
+        }}
+        strokeCap:"butt" // or round(default)/square
+        strokeJoin:"bevel" // or miter/round(default)
+      />
+    </Surface>
+  )
 }
 ```
 
@@ -119,28 +118,28 @@ Text component creates a shape based on text content using native text rendering
 
 ```js
 render(){
-	return (
-		<Surface>
-			<Text
-			
-				font={`13px "Helvetica Neue", "Helvetica", Arial`}
-				
-				/* Another way to define font property
-				 * font = {{
-				 * 	fontFamily:'Helvetica, Neue Helvetica, Arial',
-				 * 	fontSize:23,
-				 * 	fontWeight:"bold", // or "normal"
-				 * 	fontStyle:"italic" // or "normal"
-				 * }}
-				**/
-				
-				fill = "#000000"
-				alignment = "center"
-			>
-				Hello World
-			</Text>
-		</Surface>
-	)
+  return (
+    <Surface>
+      <Text
+      
+        font={`13px "Helvetica Neue", "Helvetica", Arial`}
+        
+        /* Another way to define font property
+         * font = {{
+         *   fontFamily:'Helvetica, Neue Helvetica, Arial',
+         *   fontSize:23,
+         *   fontWeight:"bold", // or "normal"
+         *   fontStyle:"italic" // or "normal"
+         * }}
+        **/
+        
+        fill = "#000000"
+        alignment = "center"
+      >
+        Hello World
+      </Text>
+    </Surface>
+  )
 }
 ```
 
@@ -159,13 +158,13 @@ alignment | String | false | oneOf(["right", "left", "center"])
 
 ```js
 redner(){
-	return (
-		<Surface>
-			<Shape
-				d={ this.getPaths() } // You can get what this.getPaths method do in following path.move demo
-			/>
-		</Surface>
-	)
+  return (
+    <Surface>
+      <Shape
+        d={ this.getPaths() } // You can get what this.getPaths method do in following path.move demo
+      />
+    </Surface>
+  )
 }
 ```
 
@@ -174,14 +173,14 @@ redner(){
 
 ```js
 getPaths = () => {
-	return	(
-		new Path()
-		.move(10, 20)
-		
-		// This means move ctx form current point to relative right 10px bottom 20px
-		// for example ctx now at (20, 20) point
-		// after move(10, 20) the point will change to (30, 40)
-	)
+  return  (
+    new Path()
+    .move(10, 20)
+    
+    // This means move ctx form current point to relative right 10px bottom 20px
+    // for example ctx now at (20, 20) point
+    // after move(10, 20) the point will change to (30, 40)
+  )
 }
 ```
 
@@ -189,14 +188,14 @@ getPaths = () => {
 
 ```js
 getPaths = () => {
-	return	(
-		new Path()
-		.moveTo(10, 20)
-		
-		// This means move ctx to absolute coordinate (10, 20)
-		// for example ctx now at (20, 20) point
-		// after moveTo(10, 20) the point will change to (10, 20)
-	)
+  return  (
+    new Path()
+    .moveTo(10, 20)
+    
+    // This means move ctx to absolute coordinate (10, 20)
+    // for example ctx now at (20, 20) point
+    // after moveTo(10, 20) the point will change to (10, 20)
+  )
 }
 ```
 
@@ -204,14 +203,14 @@ getPaths = () => {
 
 ```js
 getPaths = () => {
-	return	(
-		new Path()
-		.line(10, 20)
-		
-		// This means draw a line from current position to relative right 10px bottom 20px
-		// for example ctx now at (20, 20) point
-		// after line(10, 20) you will get a line from (20, 20) to (30, 40)
-	)
+  return  (
+    new Path()
+    .line(10, 20)
+    
+    // This means draw a line from current position to relative right 10px bottom 20px
+    // for example ctx now at (20, 20) point
+    // after line(10, 20) you will get a line from (20, 20) to (30, 40)
+  )
 }
 ```
 
@@ -219,14 +218,14 @@ getPaths = () => {
 
 ```js
 getPaths = () => {
-	return	(
-		new Path()
-		.lineTo(10, 20)
-		
-		// This means draw a line from current position to absolute coordinate (10, 20)
-		// for example ctx now at (20, 20) point
-		// after lineTo(10, 20) you will get a line from (20, 20) to (10, 20)
-	)
+  return  (
+    new Path()
+    .lineTo(10, 20)
+    
+    // This means draw a line from current position to absolute coordinate (10, 20)
+    // for example ctx now at (20, 20) point
+    // after lineTo(10, 20) you will get a line from (20, 20) to (10, 20)
+  )
 }
 ```
 ###### Path.arc
@@ -309,7 +308,7 @@ Return the current path points, which can be used on Shape `d` attribute.
 var d = new Path(path).toJSON();
 ...
 return (
-	<Shape d={d}></Shape>
+  <Shape d={d}></Shape>
 )
 ```
 
@@ -326,8 +325,8 @@ return (
  */
 
 var linearGradient = new LinearGradient({
-	'.1': 'blue', // blue in 1% position
-	'1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
+  '.1': 'blue', // blue in 1% position
+  '1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
   },
   "0", "0", "0", "400"
 )
@@ -348,8 +347,8 @@ var linearGradient = new LinearGradient({
  */
  
  var radialGradient = new LinearGradient({
-	'.1': 'blue', // blue in 1% position
-	'1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
+  '.1': 'blue', // blue in 1% position
+  '1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
   },
   "200", "200", "0", "0", "0", "400"
 )
@@ -466,8 +465,8 @@ Morph.Tween(from, to)
 
 ```js
 Morph.Tween(
-	"M 256, 213 C 245, 181 206, 187 234, 262Z",
-	"M 212, 220 C 197, 171 156, 153 123, 221Z"
+  "M 256, 213 C 245, 181 206, 187 234, 262Z",
+  "M 212, 220 C 197, 171 156, 153 123, 221Z"
 );
 ```
 ##### Path
