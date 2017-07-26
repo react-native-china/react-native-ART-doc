@@ -98,12 +98,7 @@ render(){
         stroke = '#FFFFFF'
         strokeWidth = 12
         // strokeDash Demo
-        strokeDash = {{
-          count:12, // StrokeDash array length,
-          strokeDash:[
-            10, 20, 20
-          ]
-        }}
+        strokeDash = [10, 20] // [10,20,...],line-gap-line-gap repeat.
         strokeCap:"butt" // or round(default)/square
         strokeJoin:"bevel" // or miter/round(default)
       />
