@@ -300,7 +300,7 @@ Path.close();
 Return the current path points, which can be used on Shape `d` attribute.
 
 ```js
-var d = new Path(path).toJSON();
+var d = new Path(path);
 ...
 return (
   <Shape d={d}></Shape>
