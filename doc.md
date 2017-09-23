@@ -351,6 +351,22 @@ var linearGradient = new LinearGradient({
 <Shape fill={radialGradient}>
 ```
 ##### Pattern
+```jsx
+/* Create Pattern fill
+ * @param image source that be resolved by resolveAssetSource
+ * @param width width of every repeat unit
+ * @param height height if every repeat unit
+ * @param top position to top
+ * @param left position to left
+ */
+
+import resolveAssetSource from 'resolveAssetSource'
+import localImage from './path/to/image.jpg'
+
+const pattern = new Pattern(resolveAssetSource(localImage),100,100,100,100)
+
+<Shape fill={ pattern }/>
+```
 
 ##### Transform
 
