@@ -39,6 +39,9 @@ width| string | false | width of target surface
 height|string|false|height of target surface
 visible |boolean|false|visible or invisible
 
+> Tip: <Surface/> element has default background color.
+>
+> make it transparent with `style={{ backgroundColor:'transparent' }}` and things below it can be seen.
 
 ##### Group
 To combine shapes or other groups into hierarchies that can be transformed as a set.
