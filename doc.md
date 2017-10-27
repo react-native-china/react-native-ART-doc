@@ -344,7 +344,7 @@ var linearGradient = new LinearGradient({
  * @param cy Number y-axis coordinate of the origin point
  */
  
- var radialGradient = new LinearGradient({
+ var radialGradient = new RadialGradient({
   '.1': 'blue', // blue in 1% position
   '1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
   },
