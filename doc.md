@@ -463,6 +463,33 @@ new Transform.transformTo(1, 0, 0, 1, 0, 0)
 ###### inversePoint
 
 ##### ClippingRectangle
+Control display area of graphic.
+
+```js
+render(){
+  return (
+    <Surface width={200} height={200}>
+      <ClippingRectangle
+        width={ 20 }
+        height={ 20 }
+        x={ 100 }
+        y={ 100 }
+      >
+        <Shape d={ new Path().moveTo(0,0).lineTo(200,200) } stroke="black" strokeWidth={10}/>
+      </ClippingRectangle>
+    </Surface>
+  )
+}
+```
+Lacking anyone of width and height the `<ClippingRectangle/>` won't work,but will not cause crash.
+
+Property | Type | Must | tag
+:-:|:-:|:-:|:-:
+width | Number | true | width of clipping area,work with height.
+height | Number | true | height of clipping area,work with width.
+x | Number | false | left distance from parent position,default is 0.
+y | Number | false | top distance from parent position, default is 0.
+
 
 #### Morph
 This can create transition between two paths.
