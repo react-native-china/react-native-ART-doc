@@ -33,11 +33,11 @@ render(){
   )
 }
 ```
-Property | Type | Must | tag
+Property | Type | Required | Description
 :-:|:-:|:-:|:-:
-width| string | false | width of target surface
-height|string|false|height of target surface
-visible |boolean|false|visible or invisible
+width| string | No | width of target surface
+height|string| No |height of target surface
+visible |boolean| No |visible or invisible
 
 > Tip: <Surface/> element has default background color.
 >
@@ -79,17 +79,17 @@ render(){
 }
 ```
 
-Property | Type | Must | tag
+Property | Type | Required | Description
 :-:|:-:|:-:|:-:
-width | Number | false | width of Shape
-height | Number | false | height of Shape
-d| String | false | container of path
-fill|String|false|fill style of Shape.Any color object module will be support
-stroke | String |false|stroke color of paths it contains
-strokeWidth | String |false|stroke width of paths it contains
-strokeDash | Object | false | demo followed.
-strokeCap | String | false | cap style of path end. oneOf(["butt", "round"(default), "square"])
-strokeJoin | String | false | path join point style. oneOf(["miter", "round"(default), "bevel"])
+width | Number | No | width of Shape
+height | Number | No | height of Shape
+d| String | No | container of path
+fill|String| No |fill style of Shape.Any color object module will be support
+stroke | String | No |stroke color of paths it contains
+strokeWidth | String | No |stroke width of paths it contains
+strokeDash | Object | No | demo followed.
+strokeCap | String | No | cap style of path end. oneOf(["butt", "round"(default), "square"])
+strokeJoin | String | No | path join point style. oneOf(["miter", "round"(default), "bevel"])
 
 ```js
 render(){
@@ -143,13 +143,13 @@ render(){
 
 `ART module` in React Native supplies Text component different from sebmarkbage's `art` repo that that mix `Text` and `Font` up. So `font` property is necessary, or your app will crash. And in fact, ART makes `Text` with `Path`, so just try methods what `Shape` has.
 
-Property | Type | Must | tag
+Property | Type | Required | Description
 :-:|:-:|:-:|:-:
-font | String or Object | true | font name and font size for text content
-fill | String | false | fill color
-x | Number | false | x position 
-y | Number | false | y position
-alignment | String | false | oneOf(["right", "left", "center"])
+font | String or Object | Yes | font name and font size for text content
+fill | String | No | fill color
+x | Number | No | x position 
+y | Number | No | y position
+alignment | String | No | oneOf(["right", "left", "center"])
 
 
 #### APIs
@@ -483,12 +483,12 @@ render(){
 ```
 Lacking anyone of width and height the `<ClippingRectangle/>` won't work,but will not cause crash.
 
-Property | Type | Must | tag
+Property | Type | Required | Description
 :-:|:-:|:-:|:-:
-width | Number | true | width of clipping area,work with height.
-height | Number | true | height of clipping area,work with width.
-x | Number | false | left distance from parent position,default is 0.
-y | Number | false | top distance from parent position, default is 0.
+width | Number | Yes | width of clipping area,work with height.
+height | Number | Yes | height of clipping area,work with width.
+x | Number | No | left distance from parent position,default is 0.
+y | Number | No | top distance from parent position, default is 0.
 
 
 #### Morph
