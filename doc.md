@@ -86,7 +86,7 @@ height | Number | No | height of Shape
 d| String | No | container of path
 fill|String| No |fill style of Shape.Any color object module will be support
 stroke | String | No |stroke color of paths it contains
-strokeWidth | String | No |stroke width of paths it contains
+strokeWidth | String or Number | No |stroke width of paths it contains
 strokeDash | Object | No | demo followed.
 strokeCap | String | No | cap style of path end. oneOf(["butt", "round"(default), "square"])
 strokeJoin | String | No | path join point style. oneOf(["miter", "round"(default), "bevel"])
@@ -99,7 +99,7 @@ render(){
         d = "..."
         fill = '#000000'
         stroke = '#FFFFFF'
-        strokeWidth = 12
+        strokeWidth = '12' // or {12}
         // strokeDash Demo
         strokeDash = [10, 20] // [10,20,...],line-gap-line-gap repeat.
         strokeCap:"butt" // or round(default)/square
