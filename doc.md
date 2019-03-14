@@ -155,7 +155,7 @@ alignment | String | No | oneOf(["right", "left", "center"])
 #### APIs
 
 ```js
-redner(){
+render(){
   return (
     <Surface>
       <Shape
