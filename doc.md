@@ -1,9 +1,3 @@
-# ATTENTION HERE!
-STILL UNDER COLLECTING, SOME PROPERTIES I HAVEN'T CHECKED MYSELF. 
-
-react JSX syntax doesn't allow comments inline, so remember to delete comments in demo code to avoid errors.
----
-
 #### Elements
 
 ```js
@@ -28,7 +22,7 @@ Container for all other ART components.
 render(){
   return (
     <Surface>
-      { all other components }
+      {/* all other components */}
     </Surface>
   )
 }
@@ -99,11 +93,11 @@ render(){
         d = "..."
         fill = '#000000'
         stroke = '#FFFFFF'
-        strokeWidth = '12' // or {12}
-        // strokeDash Demo
-        strokeDash = [10, 20] // [10,20,...],line-gap-line-gap repeat.
-        strokeCap:"butt" // or round(default)/square
-        strokeJoin:"bevel" // or miter/round(default)
+        strokeWidth = '12' {/* or {12}* /}
+        {/* strokeDash Demo */}
+        strokeDash = [10, 20] {/*  [10,20,...],line-gap-line-gap repeat. */}
+        strokeCap:"butt" {/* or round(default)/square */} 
+        strokeJoin:"bevel"{/* or miter/round(default) */} 
       />
     </Surface>
   )
@@ -122,7 +116,7 @@ render(){
       
         font={`13px "Helvetica Neue", "Helvetica", Arial`}
         
-        /* Another way to define font property
+        {/* Another way to define font property
          * font = {{
          *   fontFamily:'Helvetica, Neue Helvetica, Arial',
          *   fontSize:23,
@@ -159,7 +153,7 @@ render(){
   return (
     <Surface>
       <Shape
-        d={ this.getPaths() } // You can get what this.getPaths method do in following path.move demo
+        d={ this.getPaths() } {/* You can get what this.getPaths method do in following path.move demo */}
       />
     </Surface>
   )
@@ -323,8 +317,8 @@ return (
  */
 
 var linearGradient = new LinearGradient({
-  '.1': 'blue', // blue in 1% position
-  '1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
+  '.1': 'blue', {/* blue in 1% position */}
+  '1': 'rgba(255, 255, 255, 0)' {/* opacity white in 100% position */}
   },
   "0", "0", "0", "400"
 )
@@ -345,8 +339,8 @@ var linearGradient = new LinearGradient({
  */
  
  var radialGradient = new RadialGradient({
-  '.1': 'blue', // blue in 1% position
-  '1': 'rgba(255, 255, 255, 0)' // opacity white in 100% position
+  '.1': 'blue', {/* blue in 1% position */}
+  '1': 'rgba(255, 255, 255, 0)' {/* opacity white in 100% position */}
   },
   "200", "200", "0", "0", "0", "400"
 )
